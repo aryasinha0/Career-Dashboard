@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 80px;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: normal;
+            color: rgb(50,50,50);
+            text-align: center;
+        }
+        /* #banner-container {
+            width: 100%;
+            height: 500px;
+            overflow: hidden; /* Ensures no scrollbars appear */
+            /* position: relative;
+        }  */
+
+        #banner {
+            width: 100%;
+            height: auto;
+            object-fit: cover; /* Maintains aspect ratio while filling the container */
+            object-position: center; /* Adjusts the focal point of the image */
+            overflow: hidden;
+        }
+
+        h2{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 32px;
+            color: rgb(100,100,100);
+            text-align: center;
+            font-weight: normal;
+        }
+        .bodytext{
+            font-family: 'Times New Roman', Times, serif;
+            color: rgb(80,80,80);
+
+        }
+        #container{
+            max-width: 720px;
+            margin: 0 auto 0 auto;
+        }
+        .apply-btn{
+            border: 2px solid green; 
+            color: green; 
+            height: 30px;
+        }
+        .apply-btn:hover{
+            color: white;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Jovian Careers</h1>
+        <img id="banner" src="https://belmac.in/wp-content/uploads/2023/07/Careers-1.png" alt="careers_image">
+        
+        <h2>About Jovian</h2>
+        <p class="bodytext">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque aperiam laboriosam, fugit quidem dolores minus eum alias vitae atque similique est, quod quibusdam facilis voluptates obcaecati, ullam unde quasi ut?
+        Possimus amet, hic accusamus praesentium perferendis aliquid laboriosam natus! Aspernatur aperiam a libero voluptatem. Impedit ut sapiente corporis corrupti tempore molestiae exercitationem unde fuga, doloremque autem suscipit minus possimus beatae?
+        Dignissimos enim eligendi cum, maiores eius reiciendis sint. Doloribus, aperiam distinctio! Numquam ab autem molestias voluptas magnam assumenda. Non libero, corporis ratione mollitia reprehenderit eius necessitatibus nemo voluptatum odio dicta!</p>
+        <h2>Open Positions</h2>
+        <div>
+            {% for job in jobs %}
+                {% include 'jobitem.html' %}
+            {% endfor %}
+        </div>
+        <div style="text-align: center;">
+            <button>Contact Us</button>
+        </div>
+    </div>
+</body>
+</html>
